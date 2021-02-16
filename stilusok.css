@@ -6,7 +6,7 @@ main{
 }
 #jatekter{
     display: grid;
-    grid-template-columns:1fr 1fr 1fr;
+    grid-template-columns:1fr 1fr 1fr 1fr;
     grid-gap:10px;
 }
 #jatekter div img {
@@ -18,4 +18,8 @@ main{
 #jatekter div{
     padding:10px;
     background-color: red;
+}
+.kartya{
+    cursor: grab;
+    background-color: cyan !important;
 }
