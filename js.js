@@ -16,9 +16,9 @@ function init() {
 
     $("#jatekter div").click(lapcsere);
     $("#jatekter div ").hover(function () {
-        $(this).addClass("kartya");
+      $(this).fadeTo("slow",0.15);  $(this).addClass("kartya");
     },
-            function () {
+            function () {$(this).fadeTo("slow",1);
                 $(this).removeClass("kartya");
             });
 }
@@ -27,6 +27,7 @@ function lapcsere() {
     var i = $(this).attr("id");
     var fajlnev = "kartya/" + (i) + ".png";
     console.log(fajlnev);
-    $("#jatekter img").eq(i - 1).attr({"src": fajlnev, "alt": "kartyalap"});
+    $("#jatekter div img").eq(i - 1).attr({"src": fajlnev, "alt": "kartyalap"});
+    $("#jatekter div img").eq(i-1).fadeTo("slow",0.1);
 }
 
